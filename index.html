@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Push Google Analytics "_trackPageview"</title>
+    <script src="app/scripts/angular.js"></script>
+    <script src="app/scripts/angular-route.js"></script>
+    <script src="app/angular-gag.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/configuration.js"></script>
+</head>
+<body>
+
+<h1>Google Analytics Page track page view</h1>
+<script id="first.html" type="text/ng-template">
+    hello
+    <a href="#secondpage">go to second page</a>
+</script>
+
+<script id="second.html" type="text/ng-template">
+    hello
+    <a href="#firstpage">back to first page</a>
+</script>
+
+<div ng-view></div>
+
+</body>
+</html>
