@@ -1,7 +1,17 @@
-# Google Analytics(AngularJs)
+#angular-gag
+### Google Analytics(AngularJs)
 
-The following script should load once:
+Indicates how to use Google Analytics scripts in your AngularJs applications.
 
+If you call initialize script on every page(controllers), 'PageView' count shown multiple on the Google Analytics reports screen. 
+**Example**
+Firstly page loads "#/firstpage", then clicks "#/secondpage". 
+Analytics report shown like this:
+"#/firstpage" : viewcount : 1
+"#/secondpage" : viewcount : 2 (because it count with firstpage)
+
+
+Make sure to add the following scripts on the page once.
 
 ```javascript
 var _gaq = _gaq || [];
@@ -16,7 +26,7 @@ _gaq.push(['_setAccount', 'UA-xxxxx-x']);
     s.parentNode.insertBefore(ga, s);
 })();
 ```
-and every controller(page with "#")
+and controllers
 
 ```javascript
 app.controller('firstPageController', ['$scope',
